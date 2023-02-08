@@ -1,19 +1,4 @@
-function addInputBox() {
-    // Create the input element
-    var input = document.createElement("input");
-    input.type = "text";
 
-    // Set the position and size of the input box
-    input.style.position = "absolute";
-    input.style.left = "250px";
-    input.style.top = "250px";
-    input.style.width = "100px";
-    input.style.height = "25px";
-
-    // Append the input to the canvas
-    var canvas = document.getElementById("canvas");
-    canvas.appendChild(input);
-}
 NoCircles=4
 PlaceCirlces(NoCircles)
  
@@ -72,8 +57,19 @@ function PlaceCirlces(NoCircles){
 
     }while(current_Circle<= NoCircles)
    const connections= connectionsOfCircles(circleX, circleY, NoCircles)
-  
+   
    
 }
 
+function compareEASY(){
+    var points = []
+        point2 = document.getElementById('Point2Distance').value
+        point3=document.getElementById('Point3Distance').value
+       pointEnd= document.getElementById('PointEndDistance').value
+        points.push(point2)
+        points.push(point3)
+        points.push(pointEnd)
+        console.log(points)
+        return false
+}
    

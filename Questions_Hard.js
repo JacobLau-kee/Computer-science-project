@@ -12,18 +12,18 @@ function PlaceCirlces(NoCircles){
             circleY[current_Circle]=y
     do{
         if ((current_Circle === 2)){
-            x=350 
-            y=350
+            x=250
+            y=400
             circleX[current_Circle]=x
             circleY[current_Circle]=y
         }else if ((current_Circle===3)){
             x=350
-            y=150
+            y=500
             circleX[current_Circle]=x
             circleY[current_Circle]=y
         }else if ((current_Circle === 4)){
-        y=350
-        x=450
+        y=150
+        x=650
         circleX[current_Circle]=x
             circleY[current_Circle]=y
         }else if ((current_Circle===5)){
@@ -32,13 +32,13 @@ x=450
 circleX[current_Circle]=x
             circleY[current_Circle]=y
         }else if ((current_Circle===6)){
-            y=350
+            y=500
             x=650
             circleX[current_Circle]=x
             circleY[current_Circle]=y
         }else if ((current_Circle===7)){
-            y=150
-            x=650
+            y=500
+            x=850
             circleX[current_Circle]=x
             circleY[current_Circle]=y
         }else if ((current_Circle===8)){
@@ -82,4 +82,23 @@ circleX[current_Circle]=x
 
     }while(current_Circle<= NoCircles)
     const connections= connectionsOfCircles(circleX, circleY, NoCircles)
+}
+function compareHARD(){
+    var points = []
+        point2 = document.getElementById('Point2Distance').value
+        point3=document.getElementById('Point3Distance').value
+        point4=document.getElementById('Point4Distance').value
+        point5=document.getElementById('Point5Distance').value
+        point6=document.getElementById('Point6Distance').value
+        point7=document.getElementById('Point7Distance').value
+       pointEnd= document.getElementById('PointEndDistance').value
+        points.push(point2)
+        points.push(point3)
+        points.push(point4)
+        points.push(point5)
+        points.push(point6)
+        points.push(point7)
+        points.push(pointEnd)
+        console.log(points)
+        return false
 }

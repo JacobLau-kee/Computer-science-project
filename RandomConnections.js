@@ -2,13 +2,7 @@ function connectionsOfCircles(circleX, circleY, NoCircles) {
   // Create an array to store the connections for each circle
   var connections = [];
   
-  //for (let i = 1; i <= NoCircles; i++) {
-   // for (let j =0; j<=NoCircles; j++){
-     // connections[i][j] = { startCircle, targetCircle, distance }
-     // connections[i][j].distance=Infinity
-    //}
- // }
-  // For each circle
+  
   
   for (let i = 1; i <= NoCircles; i++) {
     // Initialize an array to store the connections for this circle
@@ -27,6 +21,7 @@ function connectionsOfCircles(circleX, circleY, NoCircles) {
       var targetCircle = Math.max(1, Math.floor(Math.random() * NoCircles+1));
       while (targetCircle === i) {
         targetCircle = Math.max(1, Math.floor(Math.random() * NoCircles+1));
+        // The circle must be within the bounds, between 1 and the max number of circles. Also must be a whole number
       }
       for (let m = 1; m < connections.length; m++) {
         for (let n = 0; n < connections[m].length; n++) {
@@ -36,6 +31,7 @@ function connectionsOfCircles(circleX, circleY, NoCircles) {
           ) {
             connectionExists = true;
             break;
+            // This means that multiple identical connections with differnet weights cant be added to the graph.
           }
         }
       }
@@ -57,6 +53,7 @@ function connectionsOfCircles(circleX, circleY, NoCircles) {
       }
      
  var distance = Math.max(1, Math.floor(Math.random() * 10));
+ //Creates a random distance between 1 and 10 for the connections to be, this limit is put in place to prevent extremley high integers from entering the graph making it redundent
     var startCircle = i;
     // Add the connection and distance to the connections array
     connections[i][j] = { startCircle, targetCircle, distance }
@@ -72,38 +69,13 @@ console.log("COnnections " +connections[i][j].startCircle +" to " + connections[
     
   }
   console.log(connections)
-/*for(let m=1; m<connections.length; m++){
-for(let n=0; n<connections[m].length;n++){
-  console.log("m "+m)
-  target=(connections[m][n].targetCircle)-1
-  console.log("target "+ target)
-  connections[target][0].targetCircle
-  console.log("connection1 "+connections[target][1].targetCircle)
-  console.log("connections "+ connections[connections[m][n].targetCircle][connections[connections[connections[m][n].targetCircle]].length+1])
-  connections[m][n].targetCircle=connections[connections[m][n].targetCircle]
 
-}
-}
-*/
 Length=(circleX.length-1)
 var count1arr=[]
 var count2arr=[]
 var backup=[]
 var z=0
-/*for (let a=1; a<connections.length; a++){
-  for (let k=0; k<connections[a].length; k++){
-      targetCircles=connections[a][k].targetCircle
-        for (let z=0; z<connections[targetCircles].length; z++){
-       if (connections[targetCircle][z].targetCircle===connections[a][k].startCircle){
-connections[targetCircle][z].distance=connections[a][k].distance
-console.log("changed distance from point " +connections[a][k].startCircle +" to point " +connections[a][k].targetCircle+ " with length " + connections[a][k].distance)
-       }
-      }
-    
-   
-  }
-}
-*/
+
 for(let a=1; a<=NoCircles; a++){
  
 connections[a].push({ startCircle: targetCircle, targetCircle: startCircle, distance: distance });
@@ -127,6 +99,7 @@ console.log("changed distance from point " +connections[a][b].startCircle +" to 
   connections[c][(connections[c].length+1)].targetCircle=connections[a][b].startCircle
   connections[c][(connections[c].length+1)].startCircle=connections[a][b].targetCircle
   connections[c][(connections[c].length+1)].distance=connections[a][b].distance
+  // This makes sure that if a connection is going 1 way, a connection is also added the opposite way to make it an undirected graph
 }
   } 
 
@@ -186,7 +159,7 @@ console.log(connections)
         }
            }
         }
-       
+       // draws out the random graph
         console.log(connections)
         for (let a=1; a<connections.length; a++){
           for (let k=0; k<connections[a].length; k++){
@@ -194,8 +167,8 @@ console.log(connections)
             
           }
         }
-      addInputBox()
+   
       }
-      
+     
       function squared(number) { return number*number } 
       

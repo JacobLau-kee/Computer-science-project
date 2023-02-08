@@ -80,3 +80,18 @@ circleX[current_Circle]=x
     }while(current_Circle<= NoCircles)
     const connections= connectionsOfCircles(circleX, circleY, NoCircles)
 }
+function compareMEDIUM(){
+    var points = []
+        point2 = document.getElementById('Point2Distance').value
+        point3=document.getElementById('Point3Distance').value
+        point4=document.getElementById('Point4Distance').value
+        point5=document.getElementById('Point5Distance').value
+       pointEnd= document.getElementById('PointEndDistance').value
+        points.push(point2)
+        points.push(point3)
+        points.push(point4)
+        points.push(point5)
+        points.push(pointEnd)
+        console.log(points)
+        return false
+}

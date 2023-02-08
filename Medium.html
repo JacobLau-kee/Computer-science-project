@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel = "stylesheet" href="styles.css">
         <title>Djistrakas algorithm questions</title>
-        <link rel="icon" type="image/x-icon" href="C:\Users\jacob\Downloads\favicon.ico">
+        <link rel="icon" type="image/x-icon" href="C:\Users\jacob\Downloads\favicon-32x32.png">
     </head>
     
      <canvas id="canvas" width="1000" height ="1000"></canvas>
@@ -53,7 +53,12 @@
                height: 20px;
                width: 50px;
            }
-           
+           .buttonSubmit {
+    position: relative;
+    top:30px;
+    left:400px;
+    height: 25px;
+    }
            .pointEnd {
                position: relative;
                top: -850px;
@@ -61,19 +66,24 @@
                height: 20px;
                width: 50px;
            }
+           .submitbtn {
+    position: relative;
+    top:-850px;
+    left:400px;
+    height: 25px;
+    }
      </style>
      <script src="Algorithm.js"> </script>
      <script src="RandomConnections.js"></script>
     <script src="Questions_Medium.js"></script>
+    <form onsubmit="return compareMEDIUM() "></form>
     <div> <input type="number" class="point2"id="Point2Distance" /></div> 
     <div> <input type="number" class="point3"id="Point3Distance"/></div> 
-
     <div> <input type="number" class="point4"id="Point4Distance"/></div> 
     <div> <input type="number" class="point5"id="Point5Distance"/></div> 
-    
     <div> <input type="number" class="pointEnd"id="PointEndDistance"/></div> 
-    
-   
+    <input type="submit" value = "Submit" class ="submitbtn">
+    </form>
     
    
 </html>

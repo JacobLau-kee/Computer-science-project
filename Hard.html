@@ -5,18 +5,100 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel = "stylesheet" href="styles.css">
-        <title>Djistrakas algorithm questions</title>
-        <link rel="icon" type="image/x-icon" href="C:\Users\jacob\Downloads\favicon.ico">
+        <title>Djistrakas algorithm questions Hard</title>
+        <link rel="icon" type="image/x-icon" href="C:\Users\jacob\Downloads\favicon-32x32.png">
     </head>
     
      <canvas id="canvas" width="1000" height ="1000"></canvas>
      
      <style>
-        
+        html{
+       
+       margin-left:auto;
+       margin-right:auto;
+       width:960px;
+   
+           overflow: hidden
+        }
+        .buttonSubmit {
+    position: relative;
+    top:30px;
+    left:400px;
+    height: 25px;
+    }
+           
+           .point2 {
+               position: relative;
+               top: -660px;
+               left: -275px;
+               height: 20px;
+               width: 50px;
+               
+           }
+          .point3 {
+            
+               position: relative;
+               top: -540px;
+               left: -150px;
+               height: 20px;
+               width: 50px;
+               
+           } 
+           .point4 {
+               position: relative;
+               top: -950px;
+               left: 200px;
+               height: 20px;
+               width: 50px;
+           }
+           .point5 {
+               position: relative;
+               top: -980px;
+               left: -50px;
+               height: 20px;
+               width: 50px;
+           }
+           .point6 {
+               position: relative;
+               top: -600px;
+               left: 175px;
+               height: 20px;
+               width: 50px;
+           }
+           .point7 {
+               position: relative;
+               top: -630px;
+               left: 360px;
+               height: 20px;
+               width: 50px;
+           }
+           .pointEnd {
+               position: relative;
+               top: -950px;
+               left: 400px;
+               height: 20px;
+               width: 50px;
+           }
+           .submitbtn {
+    position: relative;
+    top:-850px;
+    left:400px;
+    height: 25px;
+    }
      </style>
       <script src="Algorithm.js"> </script>
      <script src="RandomConnections.js"></script>
    <script src="Questions_Hard.js"></script>
-  
+   <form onsubmit="return compareHARD() ">
+   <div> <input type="number" class="point2"id="Point2Distance" /></div> 
+    <div> <input type="number" class="point3"id="Point3Distance"/></div> 
+   
+    <div> <input type="number" class="point4"id="Point4Distance"/></div> 
+    <div> <input type="number" class="point5"id="Point5Distance"/></div> 
+    <div> <input type="number" class="point6"id="Point6Distance"/></div> 
+    <div> <input type="number" class="point7"id="Point7Distance"/></div> 
+    <div> <input type="number" class="pointEnd"id="PointEndDistance"/></div> 
+    <input type="submit" value = "Submit" class ="submitbtn">
+  </form>
    
 </html>
